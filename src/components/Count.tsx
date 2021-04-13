@@ -2,10 +2,11 @@ import React from "react";
 
 type CountPropsType = {
     count: number;
+    maxCount: number;
 };
 
-function Count({ count }: CountPropsType) {
-    return <div className={count === 5 ? "Count_red" : ""}>{count}</div>;
+function Count({ count, maxCount }: CountPropsType) {
+    return <div className={count === maxCount ? "stop" : ""}>{count}</div>;
 }
 
 export default Count;

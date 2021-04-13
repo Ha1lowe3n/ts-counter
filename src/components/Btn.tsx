@@ -1,12 +1,12 @@
 import React from "react";
 
 type IncBtnPropsType = {
-    disabled: boolean;
-    title: "Inc" | "Reset";
+    disabled?: boolean;
+    title: string;
     callback: () => void;
 };
 
-function IncBtn({ disabled, title, callback }: IncBtnPropsType) {
+function Btn({ disabled, title, callback }: IncBtnPropsType) {
     return (
         <button disabled={disabled} onClick={callback}>
             {title}
@@ -14,4 +14,4 @@ function IncBtn({ disabled, title, callback }: IncBtnPropsType) {
     );
 }
 
-export default IncBtn;
+export default Btn;
